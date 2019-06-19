@@ -16,17 +16,17 @@
 
           implementation 'com.github.wangfeixixi:LogX:vertion'
 		  
-		  vertion最新版本如下
+	  vertion最新版本如下
 [![](https://jitpack.io/v/wangfeixixi/LogX.svg)](https://jitpack.io/#wangfeixixi/LogX)
 
-		3.在Application中添加
-        LogX.init(this);
+	3.在Application中添加
+	
+          LogX.init(this);
 
 开始使用啦！
 
 
-		1.运行在android设备上的log，Android环境
-		
+	1.运行在android设备上的log，Android环境
     	LogAndroid.d(123);
         LogAndroid.d(new int[]{1,2,3});
         TestBean testBean = new TestBean();
@@ -36,19 +36,18 @@
         LogAndroid.json();
         LogAndroid.xml();
 
-		2.运行在java环境的log：
-		
+	2.运行在java环境的log：
         LogJava.d();
         LogJava.e();
         LogJava.bean();
         LogJava.json();
         LogJava.xml();
 		
-		3.抓捕disk记录crash
+	3.抓捕disk记录crash
         
-		4.disk数据回放，打开界面
+	4.disk数据回放，打开界面
         getActivity().startActivity(new Intent(getActivity(), XixiFileActivity.class));
-			或者利用XixiFileUtils工具类里的方法自定义disk数据显示
+	  或者利用XixiFileUtils工具类里的方法自定义disk数据显示
 
 如果觉得好请给我点赞哈！
 如果需要进一步交流，邮件哦：xuanyuanxixi@foxmail.com
