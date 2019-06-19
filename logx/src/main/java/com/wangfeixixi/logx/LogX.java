@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class LogXConfig {
+public class LogX {
 
     /**
      * 需要设置当前application
@@ -61,7 +61,7 @@ public class LogXConfig {
         try {
             AssetManager assets = getContext().getResources().getAssets();
             InputStream inStream = assets.open(name);
-            String newPath = LogXConfig.getDirpath() + File.separator + name;
+            String newPath = LogX.getDirpath() + File.separator + name;
             int bytesum = 0;
             int byteread = 0;
             FileOutputStream fs = new FileOutputStream(newPath);
@@ -109,7 +109,7 @@ public class LogXConfig {
     static Application getContext() {
         if (ctx == null)
             // TODO: 2019/6/18
-//            throw new RuntimeException("please init LogXConfig");
+//            throw new RuntimeException("please init LogX");
             return null;
         else
             return ctx;

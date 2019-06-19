@@ -1,6 +1,6 @@
 package com.wangfeixixi.logx.ui;
 
-import com.wangfeixixi.logx.LogXConfig;
+import com.wangfeixixi.logx.LogX;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.util.List;
 public class XixiFileUtils {
 
     public static List<File> getFiles() {
-        return getFiles(LogXConfig.getDirpath());
+        return getFiles(LogX.getDirpath());
     }
 
     /**

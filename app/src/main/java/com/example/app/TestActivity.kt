@@ -14,7 +14,7 @@ import android.view.View
 import android.widget.Toast
 import com.wangfeixixi.base.fram.BaseActivity
 import com.wangfeixixi.logx.LogAndroid
-import com.wangfeixixi.logx.LogXConfig
+import com.wangfeixixi.logx.LogX
 import com.wangfeixixi.logx.ui.XixiFileUtils
 import java.io.File
 
@@ -61,7 +61,7 @@ class TestActivity : BaseActivity<FileDelegate>() {
 
     private fun refreshData() {
         LogAndroid.d("来一次")
-        files = XixiFileUtils.getFiles(LogXConfig.getDirpath())
+        files = XixiFileUtils.getFiles(LogX.getDirpath())
         val sb = StringBuffer()
         for (file in files!!)
             sb.append("\n" + file.name + " | " + file.length() + "b")

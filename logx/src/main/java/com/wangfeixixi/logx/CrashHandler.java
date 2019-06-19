@@ -83,7 +83,7 @@ class CrashHandler implements UncaughtExceptionHandler {
      * @return true:如果处理了该异常信息; 否则返回false.
      */
     private boolean handleException(Throwable ex) {
-        if (ex == null || !LogXConfig.isApkInDebug())
+        if (ex == null || !LogX.isApkInDebug())
             return false;
         try {
             // 使用Toast来显示异常信息
@@ -91,7 +91,7 @@ class CrashHandler implements UncaughtExceptionHandler {
                 @Override
                 public void run() {
                     Looper.prepare();
-                    Toast.makeText(LogXConfig.getContext(), "很抱歉,程序出现异常,即将重启.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LogX.getContext(), "很抱歉,程序出现异常,即将重启.", Toast.LENGTH_LONG).show();
                     Looper.loop();
                 }
             }.start();
@@ -112,8 +112,8 @@ class CrashHandler implements UncaughtExceptionHandler {
      */
     public void collectDeviceInfo() {
         try {
-            PackageManager pm = LogXConfig.getContext().getPackageManager();
-            PackageInfo pi = pm.getPackageInfo(LogXConfig.getContext().getPackageName(), PackageManager.GET_ACTIVITIES);
+            PackageManager pm = LogX.getContext().getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(LogX.getContext().getPackageName(), PackageManager.GET_ACTIVITIES);
             if (pi != null) {
                 infos.put("versionName", pi.versionName);
                 infos.put("versionCode", String.valueOf(pi.versionCode));
@@ -144,7 +144,7 @@ class CrashHandler implements UncaughtExceptionHandler {
     private void saveCrashInfoFile(Throwable ex) throws Exception {
         StringBuffer sb = new StringBuffer();
         try {
-            sb.append("\r\n" + LogXConfig.getTime() + "\n");
+            sb.append("\r\n" + LogX.getTime() + "\n");
             for (Map.Entry<String, String> entry : infos.entrySet()) {
                 String key = entry.getKey();
                 String value = entry.getValue();
@@ -175,11 +175,11 @@ class CrashHandler implements UncaughtExceptionHandler {
     private void writeFile(String sb) throws Exception {
         if (Environment.getExternalStorageState()
                 .equals(Environment.MEDIA_MOUNTED)) {//判断sd卡是否存在
-            File dir = new File(LogXConfig.getDirpath());
+            File dir = new File(LogX.getDirpath());
             if (!dir.exists())
                 dir.mkdirs();
 
-            FileOutputStream fos = new FileOutputStream(LogXConfig.getDirpath() + LogXConfig.getCrashFileName(), true);
+            FileOutputStream fos = new FileOutputStream(LogX.getDirpath() + LogX.getCrashFileName(), true);
             fos.write(sb.getBytes());
             fos.flush();
             fos.close();

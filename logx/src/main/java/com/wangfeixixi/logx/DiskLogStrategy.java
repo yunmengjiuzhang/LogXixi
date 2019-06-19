@@ -53,7 +53,7 @@ public class DiskLogStrategy implements ILogStrategy {
             String content = (String) msg.obj;
 
             FileWriter fileWriter = null;
-            File logFile = getLogFile(LogXConfig.getDirpath(), "logs");
+            File logFile = getLogFile(LogX.getDirpath(), "logs");
 
             try {
                 fileWriter = new FileWriter(logFile, true);
@@ -115,7 +115,7 @@ public class DiskLogStrategy implements ILogStrategy {
             }
 
             if (existingFile != null) {
-                if (existingFile.length() >= LogXConfig.MAX_BYTES) {
+                if (existingFile.length() >= LogX.MAX_BYTES) {
                     return newFile;
                 }
                 return existingFile;

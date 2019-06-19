@@ -12,8 +12,8 @@ public class ComponentUtils {
      * @param cls
      */
     public static void ComponentEnable(boolean enable, @NonNull Class<?> cls) {
-        PackageManager packageManager = LogXConfig.getContext().getPackageManager();
-        ComponentName componentName = new ComponentName(LogXConfig.getContext(), cls);
+        PackageManager packageManager = LogX.getContext().getPackageManager();
+        ComponentName componentName = new ComponentName(LogX.getContext(), cls);
         int res = packageManager.getComponentEnabledSetting(componentName);
 
         if (enable) {

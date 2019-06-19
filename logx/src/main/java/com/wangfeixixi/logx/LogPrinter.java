@@ -29,9 +29,9 @@ class LogPrinter implements IPrinter {
 
     private LogPrinter() {
         //log窗口
-        addAdapter(new LogcatAdapter(LogcatFormatStrategy.newBuilder().tag(LogXConfig.TAG).build()));
+        addAdapter(new LogcatAdapter(LogcatFormatStrategy.newBuilder().tag(LogX.TAG).build()));
         //disk 缓存
-        addAdapter(new LogcatAdapter(DiskFormatStrategy.newBuilder().tag(LogXConfig.TAG).build()));
+        addAdapter(new LogcatAdapter(DiskFormatStrategy.newBuilder().tag(LogX.TAG).build()));
     }
 
     private static class Inner {

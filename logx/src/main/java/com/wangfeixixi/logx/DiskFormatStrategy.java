@@ -49,7 +49,7 @@ public class DiskFormatStrategy implements IFormatStrategy {
         StringBuilder builder = new StringBuilder();
 
         // human-readable date/time
-        builder.append(LogXConfig.getTime());
+        builder.append(LogX.getTime());
 
         builder.append(SEPARATOR);
         builder.append(PrintUtils.getStackTraceInfo());
@@ -117,7 +117,7 @@ public class DiskFormatStrategy implements IFormatStrategy {
         @NonNull
         public DiskFormatStrategy build() {
             if (logStrategy == null) {
-                HandlerThread ht = new HandlerThread("AndroidFileLogger." + LogXConfig.getDirpath());
+                HandlerThread ht = new HandlerThread("AndroidFileLogger." + LogX.getDirpath());
                 ht.start();
                 Handler handler = new DiskLogStrategy.WriteHandler(ht.getLooper());
                 logStrategy = new DiskLogStrategy(handler);

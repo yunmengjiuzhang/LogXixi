@@ -24,7 +24,7 @@ public class LogcatAdapter implements IAdapter {
     private final IFormatStrategy formatStrategy;
 
     public LogcatAdapter() {
-        this.formatStrategy = LogcatFormatStrategy.newBuilder().tag(LogXConfig.TAG).build();
+        this.formatStrategy = LogcatFormatStrategy.newBuilder().tag(LogX.TAG).build();
     }
 
     public LogcatAdapter(@NonNull IFormatStrategy formatStrategy) {

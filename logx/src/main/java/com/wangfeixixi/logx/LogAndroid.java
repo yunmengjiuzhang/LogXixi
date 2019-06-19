@@ -17,7 +17,7 @@ public final class LogAndroid {
      * @param object bean对象
      */
     public static void bean(@Nullable Object object) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().json(JSON.toJSONString(object));
     }
 
@@ -27,7 +27,7 @@ public final class LogAndroid {
      * @param object 任何类型
      */
     public static void d(@Nullable Object object) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().d(object);
     }
 
@@ -35,7 +35,7 @@ public final class LogAndroid {
      * Formats the given json content and print it
      */
     public static void json(@Nullable String json) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().json(json);
     }
 
@@ -43,7 +43,7 @@ public final class LogAndroid {
      * Formats the given xml content and print it
      */
     public static void xml(@Nullable String xml) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().xml(xml);
     }
 
@@ -66,7 +66,7 @@ public final class LogAndroid {
      * @param adapter IAdapter
      */
     public static void addLogAdapter(@NonNull IAdapter adapter) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().addAdapter(checkNotNull(adapter));
     }
 
@@ -74,7 +74,7 @@ public final class LogAndroid {
      * 清除logAdapter
      */
     public static void clearLogAdapters() {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().clearLogAdapters();
     }
 
@@ -87,7 +87,7 @@ public final class LogAndroid {
      * @param throwable 异常
      */
     public static void log(int priority, @Nullable String tag, @Nullable String message, @Nullable Throwable throwable) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().log(priority, tag, message, throwable);
     }
 
@@ -98,7 +98,7 @@ public final class LogAndroid {
      * @param args    格式
      */
     public static void d(@NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().d(message, args);
     }
 
@@ -110,27 +110,27 @@ public final class LogAndroid {
      * @param args    log对象
      */
     public static void e(@NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().e(null, message, args);
     }
 
     public static void e(@Nullable Throwable throwable, @NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().e(throwable, message, args);
     }
 
     public static void i(@NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().i(message, args);
     }
 
     public static void v(@NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().v(message, args);
     }
 
     public static void w(@NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().w(message, args);
     }
 
@@ -139,7 +139,7 @@ public final class LogAndroid {
      * ie: Unexpected errors etc
      */
     public static void wtf(@NonNull String message, @Nullable Object... args) {
-        if (!LogXConfig.isApkInDebug()) return;
+        if (!LogX.isApkInDebug()) return;
         LogPrinter.getInstance().wtf(message, args);
     }
 
