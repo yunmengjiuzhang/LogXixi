@@ -1,4 +1,4 @@
-# LogX
+# LogXixi
 用于Android环境，java环境的log打印，可打印任何类型数据，规范bean对象，json，xml对应log，crash捕捉，disk存储 log crash，回放disk数据
 
 
@@ -15,10 +15,10 @@
             }
 2.module的build.gradle添加
 
-          implementation 'com.github.wangfeixixi:LogX:vertion'
+          implementation 'com.github.wangfeixixi:LogXixi:vertion'
 		  
 vertion最新版本如下
-[![](https://jitpack.io/v/wangfeixixi/LogX.svg)](https://jitpack.io/#wangfeixixi/LogX)
+[![](https://jitpack.io/v/wangfeixixi/LogXixi.svg)](https://jitpack.io/#wangfeixixi/LogXixi)
 
 3.在Application中添加
 
