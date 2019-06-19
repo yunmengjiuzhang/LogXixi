@@ -1,5 +1,5 @@
 # LogXixi
-用于Android环境，java环境的log打印，可打印任何类型数据，规范bean对象，json，xml对应log，crash捕捉，disk存储 log crash，回放disk数据
+用于Android环境，java环境的log打印，可打印任何类型数据,根据android项目环境debug环境自动打开，release环境自动关闭android环境log打印，规范bean对象，json，xml对应log，crash捕捉，disk存储 log crash，回放disk数据
 
 
 ###配置： 
