@@ -22,7 +22,7 @@ vertion最新版本如下
 
 3.在Application中添加
 
-          LogX.init(this);
+          LogXixi.init(this);
 	  
 	  
 
