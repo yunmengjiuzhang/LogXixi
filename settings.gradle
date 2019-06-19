@@ -1,1 +1,1 @@
-include ':logx', ':app'
+include ':LogXixi', ':app'

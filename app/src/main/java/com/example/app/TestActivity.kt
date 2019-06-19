@@ -13,9 +13,9 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
 import com.wangfeixixi.base.fram.BaseActivity
-import com.wangfeixixi.logx.LogAndroid
-import com.wangfeixixi.logx.LogX
-import com.wangfeixixi.logx.ui.XixiFileUtils
+import com.wangfeixixi.logxixi.LogAndroid
+import com.wangfeixixi.logxixi.LogXixi
+import com.wangfeixixi.logxixi.ui.XixiFileUtils
 import java.io.File
 
 class TestActivity : BaseActivity<FileDelegate>() {
@@ -56,12 +56,14 @@ class TestActivity : BaseActivity<FileDelegate>() {
                 IconUtils.enable(false, applicationContext)
             }
         }, R.id.btn_true, R.id.btn_false)
+
+
     }
 
 
     private fun refreshData() {
         LogAndroid.d("来一次")
-        files = XixiFileUtils.getFiles(LogX.getDirpath())
+        files = XixiFileUtils.getFiles(LogXixi.getDirPath())
         val sb = StringBuffer()
         for (file in files!!)
             sb.append("\n" + file.name + " | " + file.length() + "b")

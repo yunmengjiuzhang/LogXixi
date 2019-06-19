@@ -9,8 +9,8 @@ import android.net.Uri;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
-import com.wangfeixixi.logx.ui.XixiContentActivity;
-import com.wangfeixixi.logx.ui.XixiFileActivity;
+import com.wangfeixixi.logxixi.ui.XixiContentActivity;
+import com.wangfeixixi.logxixi.ui.XixiFileActivity;
 
 public class IconUtils {
 

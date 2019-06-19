@@ -1,6 +1,6 @@
 package com.example.app;//package com.wangfeixixi.sample;
 
-import com.wangfeixixi.logx.LogJava;
+import com.wangfeixixi.logxixi.LogJava;
 
 import java.util.ArrayList;
 

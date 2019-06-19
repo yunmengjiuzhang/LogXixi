@@ -19,6 +19,10 @@ public class FileDelegate extends BaseDelegate {
     public void setLog(String log) {
         TextView view = get(R.id.tv);
         view.setText(log);
+
+
+
+
     }
 
 
