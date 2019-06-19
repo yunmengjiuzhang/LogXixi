@@ -2,7 +2,7 @@
 用于Android环境，java环境的log打印，可打印任何类型数据,根据android项目环境debug环境自动打开，release环境自动关闭android环境log打印，规范bean对象，json，xml对应log，crash捕捉，disk存储 log crash，回放disk数据
 
 
-###配置： 
+### 配置： 
 
 1.项目根build.gradle添加
 
@@ -26,7 +26,7 @@ vertion最新版本如下
 	  
 	  
 
-###开始使用啦！
+### 开始使用啦！
 
 1.运行在android设备上的log，Android环境
 
@@ -54,5 +54,5 @@ vertion最新版本如下
         getActivity().startActivity(new Intent(getActivity(), XixiFileActivity.class));
 	  或者利用XixiFileUtils工具类里的方法自定义disk数据显示
 
-如果觉得好请给我点赞哈！
-如果需要进一步交流，邮件哦：xuanyuanxixi@foxmail.com
+### 如果觉得好请给我点赞哈！
+### 如果需要进一步交流，邮件哦：xuanyuanxixi@foxmail.com
