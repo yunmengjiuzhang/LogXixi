@@ -13,9 +13,9 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
 import com.wangfeixixi.base.fram.BaseActivity
-import com.wangfeixixi.logxixi.LogAndroid
-import com.wangfeixixi.logxixi.LogXixi
-import com.wangfeixixi.logxixi.ui.XixiFileUtils
+import com.wangfeixixi.log.LogAndroid
+import com.wangfeixixi.log.LogXixi
+import com.wangfeixixi.log.ui.XixiFileUtils
 import java.io.File
 
 class TestActivity : BaseActivity<FileDelegate>() {

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wangfeixixi.logxixi">
+    package="com.wangfeixixi.log">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,7 +13,7 @@
 
     <application>
         <activity
-            android:name="com.wangfeixixi.logxixi.ui.XixiFileActivity"
+            android:name="com.wangfeixixi.log.ui.XixiFileActivity"
             android:icon="@mipmap/xixi_log_ic_launcher"
             android:label="LogXixi"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -24,7 +24,7 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name="com.wangfeixixi.logxixi.ui.XixiContentActivity"
+            android:name="com.wangfeixixi.log.ui.XixiContentActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <!--<activity-alias-->

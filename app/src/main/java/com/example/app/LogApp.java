@@ -1,7 +1,7 @@
 package com.example.app;
 
 import com.wangfeixixi.base.BaseApp;
-import com.wangfeixixi.logxixi.LogXixi;
+import com.wangfeixixi.log.LogXixi;
 
 public class LogApp extends BaseApp {
     @Override
