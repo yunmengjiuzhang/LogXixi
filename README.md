@@ -17,7 +17,7 @@
           implementation 'com.github.wangfeixixi:LogX:vertion'
 		  
 		  vertion最新版本如下
-		  [![](https://jitpack.io/v/wangfeixixi/LogX.svg)](https://jitpack.io/#wangfeixixi/LogX)
+[![](https://jitpack.io/v/wangfeixixi/LogX.svg)](https://jitpack.io/#wangfeixixi/LogX)
 
 		3.在Application中添加
         LogX.init(this);
