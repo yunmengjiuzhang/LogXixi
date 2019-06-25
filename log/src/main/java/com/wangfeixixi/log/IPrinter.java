@@ -29,16 +29,6 @@ interface IPrinter {
 
     void wtf(@NonNull String message, @Nullable Object... args);
 
-    /**
-     * Formats the given json content and print it
-     */
-    void json(@Nullable String json);
-
-    /**
-     * Formats the given xml content and print it
-     */
-    void xml(@Nullable String xml);
-
     void log(int priority, @Nullable String tag, @Nullable String message, @Nullable Throwable throwable);
 
     void clearLogAdapters();

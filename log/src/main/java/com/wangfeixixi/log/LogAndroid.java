@@ -3,23 +3,11 @@ package com.wangfeixixi.log;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.alibaba.fastjson.JSON;
-
 import static com.wangfeixixi.log.Utils.checkNotNull;
 
 public final class LogAndroid {
 
     //*************************常用方法***************************
-
-    /**
-     * 打印bean对象并格式化
-     *
-     * @param object bean对象
-     */
-    public static void bean(@Nullable Object object) {
-        if (!LogXixi.isApkInDebug()) return;
-        LogPrinter.getInstance().json(JSON.toJSONString(object));
-    }
 
     /**
      * 打印log
@@ -28,23 +16,7 @@ public final class LogAndroid {
      */
     public static void d(@Nullable Object object) {
         if (!LogXixi.isApkInDebug()) return;
-        LogPrinter.getInstance().d(object);
-    }
-
-    /**
-     * Formats the given json content and print it
-     */
-    public static void json(@Nullable String json) {
-        if (!LogXixi.isApkInDebug()) return;
-        LogPrinter.getInstance().json(json);
-    }
-
-    /**
-     * Formats the given xml content and print it
-     */
-    public static void xml(@Nullable String xml) {
-        if (!LogXixi.isApkInDebug()) return;
-        LogPrinter.getInstance().xml(xml);
+        LogPrinter.getInstance().d(ToStringUtil.toString(object));
     }
 
     //******************************自定义方法**********************************

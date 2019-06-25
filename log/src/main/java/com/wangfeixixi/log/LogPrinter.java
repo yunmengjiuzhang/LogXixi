@@ -3,18 +3,8 @@ package com.wangfeixixi.log;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import java.io.StringReader;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
 
 import static com.wangfeixixi.log.LogAndroid.ASSERT;
 import static com.wangfeixixi.log.LogAndroid.DEBUG;
@@ -25,7 +15,6 @@ import static com.wangfeixixi.log.LogAndroid.WARN;
 import static com.wangfeixixi.log.Utils.checkNotNull;
 
 class LogPrinter implements IPrinter {
-
 
     private LogPrinter() {
         //log窗口
@@ -68,8 +57,8 @@ class LogPrinter implements IPrinter {
     }
 
     @Override
-    public void d(@Nullable Object object) {
-        log(DEBUG, null, Utils.toString(object));
+    public void d(@Nullable Object msg) {
+        log(DEBUG, null, msg.toString());
     }
 
     @Override
@@ -100,53 +89,6 @@ class LogPrinter implements IPrinter {
     @Override
     public void wtf(@NonNull String message, @Nullable Object... args) {
         log(ASSERT, null, message, args);
-    }
-
-    @Override
-    public void json(@Nullable String json) {
-        if (Utils.isEmpty(json)) {
-            d("Empty/Null json content");
-            return;
-        }
-        try {
-            json = json.trim();
-            if (json.startsWith("{")) {
-                JSONObject jsonObject = new JSONObject(json);
-                //设置缩进
-                String message = jsonObject.toString(JSON_INDENT);
-
-                d(message);
-                return;
-            }
-            if (json.startsWith("[")) {
-                JSONArray jsonArray = new JSONArray(json);
-                String message = jsonArray.toString(JSON_INDENT);
-                d(message);
-                return;
-            }
-            e("Invalid Json");
-        } catch (JSONException e) {
-            e("Invalid Json");
-        }
-    }
-
-    @Override
-    public void xml(@Nullable String xml) {
-        if (Utils.isEmpty(xml)) {
-            d("Empty/Null xml content");
-            return;
-        }
-        try {
-            Source xmlInput = new StreamSource(new StringReader(xml));
-            StreamResult xmlOutput = new StreamResult(new StringWriter());
-            Transformer transformer = TransformerFactory.newInstance().newTransformer();
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-            transformer.transform(xmlInput, xmlOutput);
-            d(xmlOutput.getWriter().toString().replaceFirst(">", ">\n"));
-        } catch (TransformerException e) {
-            e("Invalid xml");
-        }
     }
 
     @Override
