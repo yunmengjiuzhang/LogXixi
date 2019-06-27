@@ -25,31 +25,29 @@ vertion最新版本如下
           LogXixi.init(this);
 	  
 	  
-
 ### 开始使用啦！
 
 1.运行在android设备上的log，Android环境
 
     	LogAndroid.d(123);
-        LogAndroid.d(new int[]{1,2,3});
-        TestBean testBean = new TestBean();
-        testBean.a ="1";
-        testBean.b = 2;
-        LogAndroid.bean(testBean);
-        LogAndroid.json();
-        LogAndroid.xml();
-
+	LogAndroid.d(new int[]{1,2,3});
+	参数可以是基本数据类型，对象，json，xml，list，map，array
+	
 2.运行在java环境的log：
 
         LogJava.d();
         LogJava.e();
-        LogJava.bean();
-        LogJava.json();
-        LogJava.xml();
+	参数可以是基本数据类型，对象，json，xml，list，map，array
 		
-3.抓捕disk记录crash
+3.工具转化类 ToStringUtil
+
+	ToStringUtil.toString()
+	参数可以是基本数据类型，对象，json，xml，list，map，array
+	
+
+4.抓捕disk记录crash
  
-4.disk数据回放，打开界面
+5.disk数据回放，打开界面
 
         getActivity().startActivity(new Intent(getActivity(), XixiFileActivity.class));
 	  或者利用XixiFileUtils工具类里的方法自定义disk数据显示
