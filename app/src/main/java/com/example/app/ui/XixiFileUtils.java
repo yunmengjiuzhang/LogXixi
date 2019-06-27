@@ -1,4 +1,4 @@
-package com.wangfeixixi.log.ui;
+package com.example.app.ui;
 
 import com.wangfeixixi.log.LogXixi;
 

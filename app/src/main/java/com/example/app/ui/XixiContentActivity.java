@@ -1,4 +1,4 @@
-package com.wangfeixixi.log.ui;
+package com.example.app.ui;
 
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -9,7 +9,7 @@ import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.wangfeixixi.log.R;
+import com.example.app.R;
 
 import java.io.File;
 import java.util.ArrayList;

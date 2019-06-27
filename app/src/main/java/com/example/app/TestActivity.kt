@@ -15,7 +15,7 @@ import android.widget.Toast
 import com.wangfeixixi.base.fram.BaseActivity
 import com.wangfeixixi.log.LogAndroid
 import com.wangfeixixi.log.LogXixi
-import com.wangfeixixi.log.ui.XixiFileUtils
+import com.example.app.ui.XixiFileUtils
 import java.io.File
 
 class TestActivity : BaseActivity<FileDelegate>() {

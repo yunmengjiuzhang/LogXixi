@@ -1,4 +1,4 @@
-package com.wangfeixixi.log.ui;
+package com.example.app.ui;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -22,7 +22,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.wangfeixixi.log.R;
+import com.example.app.R;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -39,7 +39,6 @@ public class XixiFileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.xixi_file_activity);
-
 
 
         initUI();

@@ -1,10 +1,10 @@
-package com.wangfeixixi.log.ui;
+package com.example.app.ui;
 
 import android.support.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.wangfeixixi.log.R;
+import com.example.app.R;
 
 import java.util.List;
 
