@@ -25,6 +25,12 @@ vertion最新版本如下
 
           LogXixi.init(this);
 	  
+4.权限申请
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 	  
 ### 开始使用啦！
 
