@@ -85,16 +85,19 @@ public final class ToStringUtil {
             s = xml(object.toString());
             if (s != null)
                 return s;
+            return object.toString();
         }
+
+        //其他bean类型
         String s = bean2String(object);
         if (s != null)
             return s;
-
-        return "null";
+        else
+            return object.toString();
     }
 
     /**
-     * 任何bean对象，打印并规范数据
+     * 任何bean对象 或 JsonString，转化为规范String
      *
      * @param o debug
      */
@@ -105,6 +108,11 @@ public final class ToStringUtil {
         return s;
     }
 
+    /**
+     *  JsonString转化为规范String
+     * @param json String
+     * @return String 规范
+     */
     private static String json2String(String json) {
         if (isEmpty(json)) {
             return null;

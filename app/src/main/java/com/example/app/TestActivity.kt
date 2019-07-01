@@ -34,6 +34,7 @@ class TestActivity : BaseActivity<FileDelegate>() {
         super.onCreate(savedInstanceState)
 
         LogAndroid.d("asdfasf")
+        LogAndroid.d("'asdfasdfas'")
 
         //获取读写权限
         // 版本判断。当手机系统大于 23 时，才有必要去判断权限是否获取
