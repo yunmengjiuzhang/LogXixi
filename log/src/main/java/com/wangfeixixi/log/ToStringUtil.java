@@ -20,6 +20,9 @@ import javax.xml.transform.stream.StreamSource;
 
 import static com.wangfeixixi.log.Utils.isEmpty;
 
+/**
+ * String规范类
+ */
 public final class ToStringUtil {
     /**
      * 任意数据类型转String
