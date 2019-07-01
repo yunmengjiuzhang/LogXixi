@@ -12,10 +12,10 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
+import com.example.app.ui.XixiFileUtils
 import com.wangfeixixi.base.fram.BaseActivity
 import com.wangfeixixi.log.LogAndroid
 import com.wangfeixixi.log.LogXixi
-import com.example.app.ui.XixiFileUtils
 import java.io.File
 
 class TestActivity : BaseActivity<FileDelegate>() {
@@ -32,6 +32,8 @@ class TestActivity : BaseActivity<FileDelegate>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        LogAndroid.d("asdfasf")
 
         //获取读写权限
         // 版本判断。当手机系统大于 23 时，才有必要去判断权限是否获取
@@ -56,8 +58,6 @@ class TestActivity : BaseActivity<FileDelegate>() {
                 IconUtils.enable(false, applicationContext)
             }
         }, R.id.btn_true, R.id.btn_false)
-
-
     }
 
 

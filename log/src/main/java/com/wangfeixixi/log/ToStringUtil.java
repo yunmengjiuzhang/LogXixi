@@ -86,8 +86,11 @@ public final class ToStringUtil {
             if (s != null)
                 return s;
         }
+        String s = bean2String(object);
+        if (s != null)
+            return s;
 
-        return bean2String(object);
+        return "null";
     }
 
     /**

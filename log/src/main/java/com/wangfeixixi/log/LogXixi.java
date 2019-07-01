@@ -22,7 +22,6 @@ public class LogXixi {
     public static void init(Application application) {
         ctx = application;
         CrashHandler.getInstance().init();
-        LogAndroid.d(isApkInDebug());
     }
 
     /**
